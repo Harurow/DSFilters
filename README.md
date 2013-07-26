@@ -1,5 +1,5 @@
-*DSFilters*
-=============================================================================
+# DSFilters
+
 ## 概要
 
 DirectShow Filterライブラリ。
@@ -16,6 +16,7 @@ DirectShow Filterライブラリ。
 
 
 ## フィルター概要
+
 - CBaseMuxFilter
   合成処理を行うベースフィルタ。
   2つの入力ピン(Master/Slave)と1つの出力ピンを持つ。
@@ -23,9 +24,6 @@ DirectShow Filterライブラリ。
   - ReceiveSlave
     Slave側のピンからの入力を受け取る。
     具象クラスではこのデータをバッファリングする。
-
-- CMediaSampleMonitor
-  メディアサンプルの状況を出力するフィルタ。
 
 - CVideoResizer
   ビデオのサイズを固定サイズに変更するフィルタ。
@@ -41,8 +39,13 @@ DirectShow Filterライブラリ。
   -	MEDIASUBTYPE_A2B10G10R10
   をサポート
 
+- CVideoMux
+  2つのビデオを横に繋げて一つのビデオにします。
+  2つのビデオのサイズはCVideoResizerなどを使って揃えて下さい。
+
 
 ## その他
+
 - CDbgWnd
   デバッグ用の情報を出力するウィンドウ
 
@@ -56,29 +59,23 @@ DirectShow Filterライブラリ。
 
 - CToggleBuffer
   固定サイズのバッファを2つ使い交互に利用するバッファを作成・管理するクラス。
-  
------------------------------------------------------------------------------
+
+- CMediaSampleMonitor
+  変換フィルターとしての機能はなく、通過するメディアサンプルの情報を表示します。
+  メディアサンプルの内容が見たいときに間に挟む形で繋ぎます。
+
+
 ## ビルド環境について
 
- Windows Software Development Kit (SDK) for Windows Server 2008 and .NET Framework 3.5
- DirectXのSDKを利用するので上記のSDKをインストールする必要があります。
- また、BaseClassesを利用するので、
- %PROGRAMFILES%\Microsoft SDKs\Windows\v6.1\Samples\Multimedia\DirectShow\BaseClasses
- のサンプルをビルドしておいてください。
+Windows Software Development Kit (SDK) for Windows Server 2008 and .NET Framework 3.5
+DirectXのSDKを利用するので上記のSDKをインストールする必要があります。
+また、BaseClassesを利用するので、
+%PROGRAMFILES%\Microsoft SDKs\Windows\v6.1\Samples\Multimedia\DirectShow\BaseClasses
+のサンプルをビルドしておいてください。
 
- ※ 私の環境ではビルドはVisual Studio 2008で行っています。
+*※ 私の環境ではビルドはVisual Studio 2008で行っています。*
 
------------------------------------------------------------------------------
-## サンプルについて
-
- Visual Studio 2008 / C#でのサンプルプログラム
-
------------------------------------------------------------------------------
 ## ライセンス
 
- MITライセンス
-
------------------------------------------------------------------------------
-## リリースノート
-
+MITライセンス
 
