@@ -53,6 +53,10 @@ DEFINE_GUID(CLSID_VideoMux,
 ///////////////////////////////////////////////////////////////////////////////
 // Audio
 
+// Audio Mux
+// {2EF59C17-B855-4627-9A32-D5E87E108656}
+DEFINE_GUID(CLSID_AudioMux, 
+0x2ef59c17, 0xb855, 0x4627, 0x9a, 0x32, 0xd5, 0xe8, 0x7e, 0x10, 0x86, 0x56);
 
 
 

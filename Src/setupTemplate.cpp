@@ -56,6 +56,13 @@ CFactoryTemplate g_Templates[] = {
 		NULL,
 		&sudVideoMux
 	},
+	{
+		L"Audio Mux",
+		&CLSID_AudioMux,
+		CAudioMux::CreateInstance,
+		NULL,
+		&sudAudioMux
+	},
 };
 
 int g_cTemplates = sizeof(g_Templates) / sizeof(g_Templates[0]);
